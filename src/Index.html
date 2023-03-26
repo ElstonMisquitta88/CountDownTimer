@@ -65,26 +65,76 @@ span {
 			var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
 			var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
 			var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
-  
-			if (hours < "10") { hours = "0" + hours; }
+ 		  if (hours < "10") { hours = "0" + hours; }
 			if (minutes < "10") { minutes = "0" + minutes; }
 			if (seconds < "10") { seconds = "0" + seconds; }
-
-
 			$("#days3").html(days + "<span>Days</span>");
 			$("#hours3").html(hours + "<span>Hours</span>");
 			$("#minutes3").html(minutes + "<span>Minutes</span>");
 			$("#seconds3").html(seconds + "<span>Seconds</span>");			
-
 	}
 
+  function UTKangri() {
+		    var endTime = new Date("10 June 2023 00:00:00 GMT+05:30");			
+			endTime = (Date.parse(endTime) / 1000);
+			var now = new Date();
+			now = (Date.parse(now) / 1000);
+			var timeLeft = endTime - now;
+			var days = Math.floor(timeLeft / 86400); 
+			var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+			var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+			var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+ 		  if (hours < "10") { hours = "0" + hours; }
+			if (minutes < "10") { minutes = "0" + minutes; }
+			if (seconds < "10") { seconds = "0" + seconds; }
+			$("#days2").html(days + "<span>Days</span>");
+			$("#hours2").html(hours + "<span>Hours</span>");
+			$("#minutes2").html(minutes + "<span>Minutes</span>");
+			$("#seconds2").html(seconds + "<span>Seconds</span>");			
+	}
+
+  function Baku() {
+		    var endTime = new Date("8 April 2023 00:00:00 GMT+05:30");			
+			endTime = (Date.parse(endTime) / 1000);
+			var now = new Date();
+			now = (Date.parse(now) / 1000);
+			var timeLeft = endTime - now;
+			var days = Math.floor(timeLeft / 86400); 
+			var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+			var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+			var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+ 		  if (hours < "10") { hours = "0" + hours; }
+			if (minutes < "10") { minutes = "0" + minutes; }
+			if (seconds < "10") { seconds = "0" + seconds; }
+			$("#days1").html(days + "<span>Days</span>");
+			$("#hours1").html(hours + "<span>Hours</span>");
+			$("#minutes1").html(minutes + "<span>Minutes</span>");
+			$("#seconds1").html(seconds + "<span>Seconds</span>");			
+	}
 
 	setInterval(function() { PinParvatiPass(); }, 100);
+  setInterval(function() { UTKangri(); }, 100);
+  setInterval(function() { Baku(); }, 100);
 
 </script>
 </head>
 <body>
 
+  <div id="timer">
+    <div class="desc">Baku (8 April 2023): </div>
+    <div class="days" id="days1"></div>
+    <div class="hours" id="hours1"></div>
+    <div class="minutes"  id="minutes1"></div>
+    <div class="seconds"  id="seconds1"></div>
+  </div>
+  
+<div id="timer">
+  <div class="desc">UT Kangri (10 June 2023): </div>
+  <div class="days" id="days2"></div>
+  <div class="hours" id="hours2"></div>
+  <div class="minutes"  id="minutes2"></div>
+  <div class="seconds"  id="seconds2"></div>
+</div>
 
 <div id="timer">
   <div class="desc">Pin Parvati Pass (23 June 2023): </div>
